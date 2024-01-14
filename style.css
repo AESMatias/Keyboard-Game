@@ -1,0 +1,130 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d1117;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: rgb(12, 39, 83);
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid rgb(0, 98, 255);
+    box-shadow: rgb(0, 106, 255)0px 0px 5px 0px;
+    position: fixed;
+    height: 40px;
+    width: 100%;
+    font-size: 10px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    padding: 1em;
+    padding-top: 100px;
+
+}
+
+footer {
+    background-color: #2a2a2a;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    padding: 1em;
+
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+}
+
+footer .github-icon {
+    margin: 0 50px 0px 50px;
+    width: 80px;
+    height: 80px;
+    /* Center the children */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .github-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+footer p {
+    user-select: none;
+}
+
+footer p:hover {
+    animation: text-hover 0.2s ease-in forwards;
+}
+
+footer .github-icon img:hover {
+    animation: icon-hover 0.1s ease-in forwards;
+}
+
+@keyframes text-hover {
+    0% {
+        color: #ffffff;
+        text-shadow: 0 0 0px rgba(255, 255, 255, 0.7), 0 0 25px rgba(255, 255, 255, 0);
+    }
+
+    100% {
+        transform: scale(1.2);
+        color: #ffffff;
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.7), 0 0 8px rgba(255, 255, 255, 1);
+    }
+}
+
+
+
+@keyframes icon-hover {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2);
+        filter: brightness(0%) drop-shadow(0 0 10px rgba(255, 255, 255, 1));
+    }
+}
+
+footer p {
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* ponemos estilo al parrafo con id x dentro de un div*/
+div#to-fill {
+    color: green;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+div#word-to-write {
+    color: rgb(0, 157, 255);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+div#actual-text {
+    color: rgb(29, 180, 117);
+    font-size: 3em;
+    font-weight: bold;
+}
+
+div#current-writed {
+    color: rgb(255, 0, 0);
+    font-size: 3em;
+    font-weight: bold;
+}
