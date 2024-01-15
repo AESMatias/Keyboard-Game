@@ -4,6 +4,8 @@
 *The code is open source and free to use under the license attached in this repository* 
 
 ### Tags:
+- Words per minute
+- Letters per minute
 - Type
 - Writer
 - JavaScript
