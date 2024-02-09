@@ -1,4 +1,5 @@
 # Keyboard Game 
+# [View in GitHub Pages - Click here](https://aesmatias.github.io/Keyboard-Game/main.html)
 > **NOT READY:** This project has not been finished yet!
 
 *The code is open source and free to use under the license attached in this repository* 

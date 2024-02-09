@@ -1,3 +1,54 @@
+:root {
+    /* ---------------------------------- */
+    /*               Colors               */
+    /* ---------------------------------- */
+
+    /* -------------- Reset ------------- */
+    --background: #181824;
+
+    /* -------------- Basic ------------- */
+    --white: #fff;
+
+    /* ------------ Gradient ------------ */
+    --orange: #ff9100;
+    --pink: #f10366;
+    --blue: #6173ff;
+
+    /* ---------------------------------- */
+    /*                Fonts               */
+    /* ---------------------------------- */
+
+    /* ------------- Family ------------- */
+    --fontFamily: "Lato", sans-serif;
+
+    /* -------------- Sizes ------------- */
+    --fontSizeRoot: 16px;
+    --fontSizeMedium: 1.2rem;
+
+    /* ------------- Weights ------------ */
+    --fontWeightBold: 700;
+}
+
+.button {
+    width: fit-content;
+    color: var(--white);
+    font-size: var(--fontSizeMedium);
+    font-weight: var(--fontWeightBold);
+    border-radius: 4px;
+}
+
+.button::after {
+    content: "";
+    display: block;
+    max-width: 100%;
+    height: 4px;
+    margin-top: 1px;
+    margin-bottom: -6px;
+    background-image: linear-gradient(-90deg, var(--orange) 0%, var(--pink) 50%, var(--blue) 100%);
+    opacity: 1;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +57,10 @@ body {
     background-color: #0d1117;
     text-align: center;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0px;
+    /* Height of the footer */
 }
 
 header {
@@ -55,7 +110,7 @@ main {
 }
 
 footer {
-    background-color: #2a2a2a;
+    background-color: #171717;
     color: white;
     text-align: center;
     display: flex;
@@ -63,10 +118,14 @@ footer {
     justify-content: center;
     flex-flow: row nowrap;
     padding: 1em;
+    position: relative;
+    border-top: #7a7a7a 1.7px solid;
 
     bottom: 0;
     width: 100%;
-    height: 80px;
+    height: 60px;
+
+
 }
 
 footer .github-icon {
@@ -80,8 +139,8 @@ footer .github-icon {
 }
 
 footer .github-icon img {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
 }
 
 footer p {
@@ -126,7 +185,7 @@ footer .github-icon img:hover {
 
 footer p {
     color: white;
-    font-size: 1em;
+    font-size: 14px;
     font-weight: bold;
 }
 

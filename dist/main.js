@@ -2,7 +2,7 @@
 let lorem_text = "The enigmatic moon cast its silver glow upon the tranquil lake";
 const loremTextArray = lorem_text.split('');
 let actualArrayIndex = 0;
-let initialTime;
+let initialTime = Date.now();
 let writtingWords = String('');
 let writingIndexRight = 0;
 let writingIndexWrong = 0;
@@ -57,8 +57,9 @@ document.addEventListener("keydown", function (event) {
             console.log("You finished the text");
             alert("You finished the text");
             finishedStatus = true;
-            const finalTime = new Date();
-            const timeElapsed = (finalTime.getTime() - initialTime.getTime()) / 1000;
+            const finalTime = Date.now();
+            const timeElapsed = (finalTime - initialTime) / 1000;
+            alert(`Your final score is: ${"rightPuntuation"} and took you ${timeElapsed} seconds!`);
             return;
         }
     }
@@ -116,10 +117,7 @@ function currentWrited(pressedKey) {
 }
 function checkWordInArray(letter, arrayIndex) {
     console.log('check word array', letter, arrayIndex);
-    if (letter == ' ' && letter != ',' &&
-        letter != '.' && letter != ';' && letter != ':' &&
-        letter != '!' && letter != '?' && letter != '¿' && letter != '¡' &&
-        writingIndexRight == writingIndexWrong) {
+    if (letter == ' ' && (writingIndexRight == writingIndexWrong)) {
         actualArrayIndex++;
         if (wordsLeft > 0) {
             wordsLeft--;

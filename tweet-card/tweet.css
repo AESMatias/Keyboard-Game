@@ -1,0 +1,106 @@
+:root {
+    /* ---------------------------------- */
+    /*               Colors               */
+    /* ---------------------------------- */
+
+    /* -------------- Reset ------------- */
+    --background: #181824;
+
+    /* -------------- Basic ------------- */
+    --white: #fff;
+    --black: #000;
+    --link: #4ba1ec;
+
+    /* -------------- Gray -------------- */
+    --grayDarker: #050c26;
+    --gray: #697785;
+    --grayLight: #e4e7f0;
+
+    /* ---------------------------------- */
+    /*                Fonts               */
+    /* ---------------------------------- */
+
+    /* ------------- Family ------------- */
+    --fontFamily: "Lato", sans-serif;
+
+    /* -------------- Sizes ------------- */
+    --fontSizeRoot: 16px;
+    --fontSizeSmall: 0.875rem;
+
+    /* ------------- Weights ------------ */
+    --fontWeightBold: 700;
+
+    /* ---------- Line Heights ---------- */
+    --lineHeightSmall: 1.5;
+}
+
+.twitterCard {
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 325px;
+    padding: 16px;
+
+    font-size: var(--fontSizeSmall);
+
+    background-color: var(--white);
+    border: 1px solid var(--grayLight);
+    border-radius: 8px;
+}
+
+.twitterCard__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
+}
+
+.twitterCard__header .twitterCard__summary {
+    display: flex;
+    justify-content: space-between;
+}
+
+.twitterCard__header .twitterCard__avatar {
+    width: 60px;
+    height: 60px;
+    margin-right: 8px;
+    border-radius: 50%;
+}
+
+
+.twitterCard__header .twitterCard__fullName {
+    display: block;
+
+    color: var(--grayDarker);
+    font-size: var(--fontSizeRoot);
+}
+
+.twitterCard__header .twitterCard__userName {
+    color: var(--gray);
+}
+
+.twitterCard__header .twitterCard__brand {
+    width: 24px;
+    height: 20px;
+}
+
+/* ------------------------ */
+/*          Content         */
+/* ------------------------ */
+.twitterCard__content a {
+    color: var(--link);
+}
+
+.twitterCard__content a:hover {
+    text-decoration: underline;
+}
+
+.twitterCard__content p {
+    margin-bottom: 15px;
+
+    color: var(--grayDarker);
+    line-height: var(--lineHeightSmall);
+}
+
+.twitterCard__content p:last-child {
+    margin-bottom: 0;
+}
